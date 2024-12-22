@@ -1,0 +1,101 @@
+
+  
+  button {
+    background-color: #4A90E2; 
+    color: white;
+    padding: 12px 24px;
+    border: 2px solid #4A90E2; 
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #357ABD; 
+    border-color: #357ABD; 
+  }
+  
+  form {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 2px solid #ddd; 
+    border-radius: 8px;
+    background-color: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  form:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+  }
+  
+  label {
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #4A90E2; 
+  }
+  
+  input[type="text"], input[type="number"], input[type="range"], select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 16px;
+    border: 2px solid #ccc; 
+    border-radius: 5px;
+    background-color: #f9f9f9; 
+    color: #333; 
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus, input[type="number"]:focus, input[type="range"]:focus, select:focus {
+    border-color: #4A90E2; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); 
+  }
+  
+  
+  button[type="button"]:hover {
+    background-color: #357ABD; 
+  }
+  
+  select {
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ccc; 
+    border-radius: 5px;
+    background-color: #f9f9f9; 
+    transition: all 0.3s ease;
+  }
+  
+  select:hover {
+    border-color: #4A90E2; 
+  }
+  
+  form div {
+    margin-bottom: 20px;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+    height: 8px; 
+    background-color: #ddd; 
+    border-radius: 5px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4A90E2; 
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  input[type="range"]:hover::-webkit-slider-thumb {
+    background: #357ABD; 
+  }
+  

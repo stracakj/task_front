@@ -1,0 +1,84 @@
+<div>
+  <button (click)="onAddButtonClick()">
+    {{ formVisible ? 'Cancel' : 'Add New Device' }}
+  </button>
+
+  <form *ngIf="formVisible" [formGroup]="form">
+    <label>
+      Device Name:
+      <input type="text" formControlName="deviceName" />
+    </label>
+
+    <label>
+      Device Type:
+      <select formControlName="deviceType">
+        <option value="Light">Light</option>
+        <option value="Thermostat">Thermostat</option>
+        <option value="Camera">Camera</option>
+        <option value="Blinds">Blinds</option>
+      </select>
+    </label>
+
+    <div *ngIf="form.get('deviceType')?.value === 'Light'">
+      <label>
+        Brightness (0-100):
+        <input type="range" min="0" max="100" formControlName="brightness" />
+      </label>
+      <label>
+        State (On, Off):
+        <select formControlName="state">
+          <option value="on">On</option>
+          <option value="off">Off</option>
+        </select>
+      </label>
+    </div>
+
+    <div *ngIf="form.get('deviceType')?.value === 'Thermostat'">
+      <label> 
+        Temperature:
+        <input type="text" formControlName="temperature" />
+      </label>
+      <label>
+        Mode (Cooling, Heating, Off):
+        <select formControlName="mode">
+          <option value="cooling">Cooling</option>
+          <option value="heating">Heating</option>
+          <option value="off">Off</option>
+        </select>
+      </label>
+    </div>
+
+    <div *ngIf="form.get('deviceType')?.value === 'Camera'">
+      <label>
+        Camera State (Active, Inactive):
+        <select formControlName="cameraState">
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      </label>
+      <label>
+        Recording (True, False):
+        <select formControlName="recording">
+          <option value="true">True</option>
+          <option value="false">False</option>
+        </select>
+      </label>
+    </div>
+
+    <div *ngIf="form.get('deviceType')?.value === 'Blinds'">
+      <label>
+        Blinds State (Active, Inactive):
+        <select formControlName="blindsState">
+          <option value="active">Active</option>
+          <option value="inactive">Inactive</option>
+        </select>
+      </label>
+      <label>
+        Position (0-100):
+        <input type="range" min="0" max="100" formControlName="position" />
+      </label>
+    </div>
+
+    <button type="submit" (click)="onSubmit()">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,24 @@
+<div class="container">
+<div class="button-device">
+  <app-device-control (addButtonClicked)="toggleDeviceList()"></app-device-control>
+</div>
+<section class="device-list-section" *ngIf="isDeviceListVisible">
+    <h2>Device List</h2>
+    <div class="device-wrapper">
+      <div *ngFor="let device of devices" class="device-item" (click)="viewDevice(device.id)">
+        <div class="device-item-header">
+          <h3>{{ device.name }}</h3>
+          <p class="device-type">Type: {{ device.type }}</p>
+          <div class="device-item-actions">
+            <button 
+              class="delete-button" 
+              (click)="deleteDevice($event, device.id)" 
+              mat-icon-button>
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+</div>

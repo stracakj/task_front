@@ -1,0 +1,66 @@
+.device-list-section {
+    max-width: 450px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 100%;
+  }
+  
+  .device-item {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9; 
+    transition: all 0.3s ease;
+  }
+  
+  .device-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: darkgrey;
+  }
+  
+  .device-item-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .device-item h3 {
+    font-size: 18px;
+    color: #4A90E2; 
+    margin: 0;
+  }
+
+
+  .delete-button {
+    background-color: #ff4d4d; 
+    z-index: 100;
+    color: white; 
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .delete-button:hover {
+    background-color: #ff0000; 
+  }
+
+  .device-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+  }
+  
